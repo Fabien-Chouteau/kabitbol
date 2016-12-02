@@ -1,0 +1,45 @@
+/************************/
+/* Kabitbol build tools */
+/************************/
+
+You can find below the configure options an the installation procedure for all tools needed for Kabitbol.
+
+
+/* binutils 2.19.1 */
+	 wget http://ftp.gnu.org/gnu/binutils/binutils-2.19.1.tar.bz2
+	 tar xf binutils-2.19.1.tar.bz2
+	 cd binutils-2.19.1
+	 mkdir builddir
+	 cd builddir
+	 ../configure --program-prefix=sparc-elf- --target=sparc-elf
+	 make
+	 sudo make install
+
+/* GMP 4.3.1 */
+	 wget ftp://ftp.gnu.org/gnu/gmp/gmp-4.3.1.tar.bz2
+	 tar xf gmp-4.3.1.tar.bz2
+	 cd gmp-4.3.1
+	 mkdir builddir
+	 cd builddir	 ../configure
+	 make
+	 sudo make install
+
+/* MPFR 2.4.1 */
+	 wget http://www.mpfr.org/mpfr-current/mpfr-2.4.1.tar.bz2
+	 tar xf mpfr-2.4.1.tar.bz2
+	 cd mpfr-2.4.1
+	 mkdir builddir
+	 cd builddir
+	 ../configure
+	 make
+	 sudo make install
+
+/* GCC 4.3.3 */
+	 wget ftp://ftp.irisa.fr/pub/mirrors/gcc.gnu.org/gcc/releases/gcc-4.3.3/gcc-4.3.3.tar.bz2
+	 tar xf gcc-4.3.3.tar.bz2
+	 cd gcc-4.3.3
+	 mkdir builddir
+	 cd builddir
+	  ../configure --program-prefix=sparc-elf- --target=sparc-elf -with-newlib --without-headers --with-gnu-as --with-gnu-ld --enable-languages=c --disable-nls --disable-libssp -C
+	 make
+	 sudo make install
